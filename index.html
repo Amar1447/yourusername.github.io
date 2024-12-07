@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I love for people what I love for myself - Sharing knowledge and inspiration">
+    <meta name="keywords" content="articles, knowledge, learning, education, sharing, community">
+    <title>I love for people what I love for myself</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="Lugo/favicon.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="Lugo/logo.png" alt="Site Logo" width="150" height="40">
+                    <span class="site-slogan">I love for people what I love for myself</span>
+                </a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button type="button"><i class="fas fa-search"></i></button>
+                <div class="heart-counter">
+                    <i class="fas fa-heart"></i>
+                    <span id="heartCount">0</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Science</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Subscribe</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="featured-article">
+                <img src="Lugo/featured.jpg" alt="Featured article about AI technology" loading="lazy">
+                <div class="featured-content">
+                    <span class="category">Technology</span>
+                    <h1>The Future of Artificial Intelligence</h1>
+                    <p>Explore how AI is reshaping our world and what the future holds for this revolutionary technology...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-wrapper">
+            <section class="articles-grid">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="tech">Technology</button>
+                    <button class="filter-btn" data-filter="science">Science</button>
+                    <button class="filter-btn" data-filter="health">Health</button>
+                </div>
+
+                <div class="articles-container">
+                    <!-- Article cards will be dynamically loaded here -->
+                </div>
+
+                <button class="load-more">Load More Articles</button>
+
+                <div class="support-section">
+                    <p>If you like the articles and want to support me, you can send to my PayPal: 
+                        <a href="https://paypal.me/hamdaouiamar14" class="paypal-link" target="_blank">
+                            <i class="fab fa-paypal"></i> hamdaouiamar14@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="sidebar-widget">
+                    <h3>Trending Articles</h3>
+                    <ul class="trending-list">
+                        <li>
+                            <img src="Lugo/trend1.jpg" alt="Trending article 1" loading="lazy">
+                            <div class="trending-content">
+                                <h4>Web Development Trends 2024</h4>
+                                <span>5 min read</span>
+                                <button class="heart-btn" onclick="incrementHeart(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="heart-count">0</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Lugo/shopping-trend.jpg" alt="Shopping trends article" loading="lazy">
+                            <div class="trending-content">
+                                <h4>Latest Shopping Trends for 2024</h4>
+                                <span>4 min read</span>
+                                <button class="heart-btn" onclick="incrementHeart(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="heart-count">0</span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="Lugo/ecommerce.jpg" alt="E-commerce tips article" loading="lazy">
+                            <div class="trending-content">
+                                <h4>Smart Shopping: Best Deals Guide</h4>
+                                <span>3 min read</span>
+                                <button class="heart-btn" onclick="incrementHeart(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="heart-count">0</span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Get the latest articles delivered to your inbox</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>Popular Tags</h3>
+                    <div class="tags">
+                        <a href="#" class="tag">AI</a>
+                        <a href="#" class="tag">Technology</a>
+                        <a href="#" class="tag">Health</a>
+                        <a href="#" class="tag">Science</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About ArticleHub</h4>
+                <p>Your trusted source for high-quality articles and knowledge sharing.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <form id="contact-form">
+                    <input type="email" placeholder="Your email">
+                    <textarea placeholder="Your message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ArticleHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
